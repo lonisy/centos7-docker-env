@@ -8,3 +8,8 @@ services:
       - /data/web:/data
     restart: always
     container_name: nginx
+  php70fpm:
+    image: lee/php-fpm:7.0.22
+    ports:
+      - "9000:9000"
+    container_name: php70fpm
