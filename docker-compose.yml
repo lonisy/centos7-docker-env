@@ -13,7 +13,7 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - /data:/data
+      - /data/web:/data
     container_name: php70fpm
   mysql56:
     build: ./mysql/5.6
