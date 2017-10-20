@@ -22,8 +22,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Lpi*hmZB@f6T83*1vS
     volumes:
-      - /data/database/mysql/data:/var/lib/mysql
-      - /data/database/mysql/sock:/var/run/mysqld
+      - /data/database/mysql/data:/data
     container_name: mysql56
   redis32:
     build: ./redis/3.2.10
