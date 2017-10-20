@@ -18,7 +18,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: LphmZB@f6T83*1vS
+      MYSQL_ROOT_PASSWORD: Lpi*hmZB@f6T83*1vS
     container_name: mysql56
   redis32:
     build: ./redis/3.2.10
