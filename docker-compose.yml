@@ -7,11 +7,15 @@ services:
     volumes:
       - /data/web:/data
     restart: always
+    volumes:
+      - /data:/data
     container_name: nginx
   php70fpm:
     image: lee/php-fpm:7.0.22
     ports:
       - "9000:9000"
+    volumes:
+      - /data:/data
     container_name: php70fpm
   mysql56:
     build: ./mysql/5.6
@@ -19,6 +23,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: Lpi*hmZB@f6T83*1vS
+    volumes:
+      - /data/database/mysql:/data
     container_name: mysql56
   redis32:
     build: ./redis/3.2.10
