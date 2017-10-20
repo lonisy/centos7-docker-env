@@ -31,3 +31,8 @@ services:
     volumes:
       - /data/database/redis:/data
     container_name: redis32
+  beanstalk:
+    image: bevand10/alpine-beanstalk:latest
+    ports:
+      - "11300:11300"
+    container_name: beanstalk
