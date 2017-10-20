@@ -13,6 +13,13 @@ services:
     ports:
       - "9000:9000"
     container_name: php70fpm
+  mysql56:
+    build: ./mysql/5.6
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: LphmZB@f6T83*1vS
+    container_name: mysql56
   redis32:
     build: ./redis/3.2.10
     ports:
