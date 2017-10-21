@@ -12,6 +12,10 @@ services:
     image: lee/php-fpm:7.0.22
     ports:
       - "9000:9000"
+    links:
+      - "mysql56:mysql56con"
+      - "redis32:redis32con"
+      - "beanstalk:beanstalkcon"
     volumes:
       - /data/web:/data
     container_name: php70fpm
