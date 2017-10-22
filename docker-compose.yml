@@ -11,7 +11,7 @@ services:
       - "php70fpm:fastcgi_php70fpm"
     container_name: nginx
   php70fpm:
-    image: lee/php-fpm:7.0.22
+    build: ./php/7.0
     ports:
       - "9000:9000"
     links:
